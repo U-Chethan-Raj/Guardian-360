@@ -70,7 +70,7 @@
 git clone https://github.com/yourusername/guardian-360.git
 ```
 
-###2️⃣ Upload Arduino Code (Emergency Controller)
+### 2️⃣ Upload Arduino Code (Emergency Controller)
 
 Open guardian_arduino.ino in Arduino IDE
 
@@ -86,7 +86,7 @@ DFRobotDFPlayerMini
 Connect Arduino UNO and upload the sketch
 
 
-###3️⃣ Upload NodeMCU Code (Motion + IoT Handler)
+### 3️⃣ Upload NodeMCU Code (Motion + IoT Handler)
 
 ```bash
 Open guardian_nodemcu.ino in Arduino IDE
@@ -102,21 +102,21 @@ base64
 
 Replace:
 
-```bash
+`
 YOUR_WIFI, YOUR_PASSWORD
 
 YOUR_BLYNK_TOKEN
 
 YOUR_IMGBB_API_KEY
-```bash
+`
 
 Upload to NodeMCU
 
-
+```
 
 ---
 
-###📷 Optional: ESP32-CAM Integration
+### 📷 Optional: ESP32-CAM Integration
 
 For live video streaming and surveillance snapshots via motion trigger, integrate ESP32-CAM using the esp32-cam-motion.ino file (coming soon).
 
