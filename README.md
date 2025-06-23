@@ -68,9 +68,9 @@
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/yourusername/guardian-360.git
-```bash
+```
 
-2️⃣ Upload Arduino Code (Emergency Controller)
+###2️⃣ Upload Arduino Code (Emergency Controller)
 
 Open guardian_arduino.ino in Arduino IDE
 
@@ -86,8 +86,9 @@ DFRobotDFPlayerMini
 Connect Arduino UNO and upload the sketch
 
 
-3️⃣ Upload NodeMCU Code (Motion + IoT Handler)
+###3️⃣ Upload NodeMCU Code (Motion + IoT Handler)
 
+```bash
 Open guardian_nodemcu.ino in Arduino IDE
 
 Install libraries:
@@ -101,12 +102,13 @@ base64
 
 Replace:
 
+```bash
 YOUR_WIFI, YOUR_PASSWORD
 
 YOUR_BLYNK_TOKEN
 
 YOUR_IMGBB_API_KEY
-
+```bash
 
 Upload to NodeMCU
 
@@ -114,7 +116,7 @@ Upload to NodeMCU
 
 ---
 
-📷 Optional: ESP32-CAM Integration
+###📷 Optional: ESP32-CAM Integration
 
 For live video streaming and surveillance snapshots via motion trigger, integrate ESP32-CAM using the esp32-cam-motion.ino file (coming soon).
 
@@ -151,15 +153,6 @@ ESP32-CAM → Dedicated 5V/2A USB or battery
 
 ---
 
-🏷️ Tags
-
-arduino iot nodemcu esp8266 smart-home fire-alarm
-gas-detector gsm dfplayer emergency-system blynk
-esp32-cam motion-detection sos-alert home-security
-
-
----
-
 🧪 License
 
 This project is licensed under the MIT License — see the LICENSE file for details.
@@ -171,3 +164,9 @@ This project is licensed under the MIT License — see the LICENSE file for deta
 
 Made with 💡 and purpose by U Chethan Raj
 Want to contribute or deploy it in the field? Fork it, modify it, and build better safety together!
+
+![Arduino](https://img.shields.io/badge/platform-Arduino-orange)
+![ESP8266](https://img.shields.io/badge/mcu-NodeMCU-blue)
+![DFPlayer](https://img.shields.io/badge/audio-DFPlayer-red)
+![GSM](https://img.shields.io/badge/network-SIM800L-brightgreen)
+![IoT](https://img.shields.io/badge/cloud-Blynk-lightgrey)
