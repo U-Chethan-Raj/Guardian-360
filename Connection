@@ -1,0 +1,92 @@
+### 🔋 1. Power Supply Requirements by Component
+
+Component	Voltage	Current Needed	Notes
+
+Arduino UNO	7–12V	~50–250mA	Can accept 9V battery or 5V regulated to VIN
+NodeMCU (ESP8266)	5V	~200–300mA peak	Needs stable 5V to 3.3V LDO onboard
+SIM800L	3.7–4.2V	≥2A peak	Can cause brownout if undervoltaged
+DFPlayer Mini	3.2–5V	~50–100mA	Needs clean 5V to avoid noise
+ESP32-CAM	5V	≥500mA	Brownouts are common if not isolated
+GPS Module	3.3–5V	~30–50mA	Works off Arduino 5V
+Sensors (MQ6, flame, PIR)	5V	~20–50mA each	Minimal draw
+
+
+
+---
+
+### ✅ 2. Power Design Recommendations
+
+🔌 A. Dual Power Supply Model (Safe & Efficient)
+
+Path	Supply Method	What It Powers
+
+🔋 Power Path A	2x 18650 Li-ion (7.4V) + Buck Converter to 5V	Arduino, DFPlayer, GPS, sensors
+🔋 Power Path B	Separate 3.7V Li-ion + AMS1117 or LM2596 to 4.0V	SIM800L
+🔌 NodeMCU	USB power bank or same 5V output (min 2A)	NodeMCU & ESP32-CAM
+
+
+> ⚠️ Keep SIM800L and ESP32-CAM on isolated regulators to avoid brownouts during high draw (SIM startup, camera init).
+
+
+
+
+---
+
+### 🔧 3. Connection Diagram (Power)
+
+[2x 18650 Battery Pack (7.4V)]
+             ↓
+      [LM2596 Buck to 5V]
+             ↓
+ ┌────────────┬─────────────┬─────────────┐
+ │            │             │             │
+Arduino     DFPlayer      GPS         Sensors
+
+[Single 3.7V 18650 Li-ion]
+             ↓
+    [AMS1117/LM317 to 4.0V]
+             ↓
+           SIM800L
+
+[5V 2A USB Power Bank]
+             ↓
+       NodeMCU + ESP32-CAM
+
+
+---
+
+### 🔄 4. Battery Backup & Auto Switch (Optional)
+
+You can use:
+
+TP4056 module with protection for charging 18650 batteries.
+
+Diodes or relays to auto-switch to battery if external power fails.
+
+
+
+---
+
+### 🔋 5. Recommended Components
+
+Module	Use
+
+LM2596 Buck Converter	7.4V to 5V for Arduino path
+AMS1117 3.3/4.0V Regulator	3.7V to 4.0V for SIM800L
+TP4056 BMS Charger	Recharge 18650 safely
+2A+ Power Bank	Stable 5V to NodeMCU
+
+
+
+---
+
+### 🧪 6. Final Checks Before Deployment
+
+✅ Add power indicator LED
+✅ Use fuses or polyfuses for safety
+✅ Test each power rail independently
+✅ Use heat sinks for linear regulators if needed
+✅ Ensure total current budget does not exceed supply
+
+
+---
