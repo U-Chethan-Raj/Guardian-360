@@ -1,4 +1,10 @@
 # 🛡️ Guardian 360 — Smart Emergency Detection & Alert System
+![Arduino](https://img.shields.io/badge/platform-Arduino-orange)
+![ESP8266](https://img.shields.io/badge/mcu-NodeMCU-blue)
+![DFPlayer](https://img.shields.io/badge/audio-DFPlayer-red)
+![GSM](https://img.shields.io/badge/network-SIM800L-brightgreen)
+![IoT](https://img.shields.io/badge/cloud-Blynk-lightgrey)
+
 
 **Guardian 360** is a real-time, multi-sensor emergency detection system that safeguards your home or facility from gas leaks, fires, and unauthorized intrusions. It combines the power of **Arduino**, **NodeMCU**, **DFPlayer**, **SIM800L**, **GPS**, and **Blynk IoT** to provide instant alerts via SMS, audio, and live app notifications.
 
@@ -165,8 +171,3 @@ This project is licensed under the MIT License — see the LICENSE file for deta
 Made with 💡 and purpose by U Chethan Raj
 Want to contribute or deploy it in the field? Fork it, modify it, and build better safety together!
 
-![Arduino](https://img.shields.io/badge/platform-Arduino-orange)
-![ESP8266](https://img.shields.io/badge/mcu-NodeMCU-blue)
-![DFPlayer](https://img.shields.io/badge/audio-DFPlayer-red)
-![GSM](https://img.shields.io/badge/network-SIM800L-brightgreen)
-![IoT](https://img.shields.io/badge/cloud-Blynk-lightgrey)
