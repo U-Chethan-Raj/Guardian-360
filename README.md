@@ -15,7 +15,6 @@
 - 🔋 **Battery Operated & Safe**: Includes charging protection, regulated output, and power backup
 - 🛜 **Expandable Architecture**: Designed for future integration with ESP32-CAM and cloud services
 
-![Guardian 360](https://user-images.githubusercontent.com/demo/guardian360.png)
 
 ---
 
@@ -69,6 +68,7 @@
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/yourusername/guardian-360.git
+```bash
 
 2️⃣ Upload Arduino Code (Emergency Controller)
 
